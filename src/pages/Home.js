@@ -18,7 +18,8 @@ const Home = ({ navigation }) => {
                 navigation.navigate('Result')
             })
             .catch(err => {
-                console.log(err)
+                setResponse({ domain: domain, result: [] })
+                navigation.navigate('Result')
             })
             .finally(() => {
                 setDomain('')
